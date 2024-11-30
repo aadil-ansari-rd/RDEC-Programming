@@ -1,0 +1,50 @@
+<script>
+    function getEmployee(id) {
+        let pr = new Promise((resolve , reject)=>{
+            setTimeout(() => {
+                resolve ({id:10, name:'Aadil', post:'Professor',mobileNo : 345678})
+            }, 3000);
+        })
+        return pr
+    }
+    function getBasicSalary(post) {
+        let pr = new Promise((resolve , reject)=>{
+            setTimeout(() => {
+                let bs
+                if(post=='Professor'){
+                    bs = 50000
+                }
+                else if(post=='Lecturer' ){
+                    bs= 40000
+                }
+                else{
+                    bs = 30000
+                }
+                resolve (bs)
+            }, 3000);
+        })
+        return pr
+    }
+    function getGrossSalary(bs) {
+        let pr = new Promise((resolve , reject)=>{
+            setTimeout(() => { 
+                let hra = 10000
+                let da = (bs*50)/100
+                let ma = (bs*20)/100
+                let ta= (bs*30)/30
+                let gs = bs + hra + da +ma + ta
+                resolve (gs)
+            }, 3000);
+        })
+        return pr
+    }
+    getEmployee(1).then((emp)=>{
+        console.log(emp)
+        return getBasicSalary(emp.post)
+    }).then((bs)=>{
+        console.log(bs ,'Basic Salary')
+        return getGrossSalary(bs)
+    }).then((gs)=>{
+        console.log(gs , 'Gross Salary')
+    })
+</script>

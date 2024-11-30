@@ -1,0 +1,39 @@
+<script>
+    function getMovie(id){
+        let pr = new Promise((resolve, reject)=>{
+            setTimeout(() => {
+                resolve({id : 1 , name : 'hindustan'})
+            }, 3000);
+        })
+        return pr 
+    }
+    function getCinema(id){
+        let pr = new Promise((resolve, reject)=>{
+            setTimeout(() => {
+                resolve(['maya','kaya','pya'])
+            }, 3000);
+        })
+        return pr
+    }
+    function getTicket(id){
+        let pr = new Promise((resolve, reject)=>{
+            setTimeout(() => {
+                resolve({
+                    silver: 10,
+                    gold : 59,
+                    diamond : 100
+                })
+            }, 3000);
+        })
+        return pr 
+    }
+    getMovie(1).then((movie)=>{
+        console.log(movie.name)
+        return getCinema()
+    }).then((cinema)=>{
+        console.log(cinema[0])
+        return getTicket()
+    }).then((ticket)=>{
+        console.log(ticket,'ticket')
+    })
+</script>

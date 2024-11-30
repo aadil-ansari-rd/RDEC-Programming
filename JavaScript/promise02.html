@@ -1,0 +1,16 @@
+<script>
+    function simpleIntrest(principle , rate, time){
+        let pr = new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                let si = (principle*rate*time)/100
+                resolve(si)
+            },4000)
+        })
+        return pr
+    }
+    simpleIntrest(1000, 10, 2).then((si)=>{
+        console.log(si)
+    }).catch((error)=>{
+        
+    })
+</script>

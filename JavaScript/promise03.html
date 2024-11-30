@@ -1,0 +1,38 @@
+<script>
+    function getUser(id){
+        let pr = new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                //content
+                resolve({id:1 , name: 'Nousad'})
+            },3000)
+        })
+        return pr
+    }
+    function getRepos(id){
+        let pr = new Promise((resolve , reject)=>{
+            setTimeout(()=>{
+                //content
+                resolve(['R1','R2','R3'])
+            },3000)
+        })
+        return pr
+    }
+    function getCommits(repos){
+        let pr =new Promise((resolve , reject)=>{
+            setTimeout(()=>{
+                //content
+                resolve(['C1','C2','C3'])
+            },3000)
+        })
+        return pr
+    }
+    getUser(1).then((user)=>{
+        console.log(user)
+        return getRepos(user.id)
+    }).then((repos)=>{
+        console.log(repos ,'repose')
+        return getCommits(repos)
+    }).then((commits)=>{
+        console.log(commits, 'commits')
+    })
+</script>   
