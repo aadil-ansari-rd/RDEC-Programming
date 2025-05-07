@@ -36,26 +36,7 @@ The purpose of this repository is to:
 
 ---
 
-## 🚀 How to Use
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/aadil-ansari-rd/RDEC-Programming.git
-   ````
-
-2. Navigate to your desired language directory:
-
-   ```bash
-   cd RDEC-Programming/C
-   # or
-   cd RDEC-Programming/Java
-   # or
-   cd RDEC-Programming/JavaScript
-   ```
-
-3. Open and run the programs using a compiler, IDE, or browser (for JS).
-
----
 
 ## 🙋‍♂️ Author
 
