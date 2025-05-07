@@ -41,7 +41,7 @@ The purpose of this repository is to:
 1. Clone the repository:
    ```bash
    git clone https://github.com/aadil-ansari-rd/RDEC-Programming.git
-````
+   ````
 
 2. Navigate to your desired language directory:
 
@@ -68,7 +68,4 @@ GitHub: [aadil-ansari-rd](https://github.com/aadil-ansari-rd)
 
 This repository is for educational and reference purposes only.
 
-```
 
-Let me know if you want me to include specific topics covered (like recursion, OOP, file handling, etc.) under each language section.
-```
